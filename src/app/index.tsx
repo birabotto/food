@@ -4,6 +4,9 @@ import { Banner } from "../components/banner";
 import Constants from "expo-constants";
 import { Search } from "../components/search";
 import { Section } from "../components/section";
+import { TrendingFoods } from "../components/trending";
+import { Restaurants } from "../components/restaurants";
+import { RestaurantVerticalList } from "../components/list";
 const statusBarHeight = Constants.statusBarHeight;
 
 export default function Index() {
@@ -24,6 +27,24 @@ export default function Index() {
         action={() => console.log("CLick see more")}
         size="text-2xl"
       />
+      <TrendingFoods />
+
+      <Section
+        name="Famous on Food"
+        label="See all"
+        action={() => console.log("CLICOU Famous")}
+        size="text-xl"
+      />
+
+      <Restaurants />
+
+      <Section
+        name="Restaurants"
+        label="See all"
+        action={() => console.log("CLICOU RESTAURANTS")}
+        size="text-xl"
+      />
+      <RestaurantVerticalList />
     </ScrollView>
   );
 }
